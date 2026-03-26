@@ -11,7 +11,7 @@ const features = [
   { icon: Sparkles, label: "AI Art" },
   { icon: Download, label: "PNG / SVG / JPEG" },
   { icon: Shield, label: "No Watermarks" },
-  { icon: Zap, label: "Instant & Free" },
+  { icon: Zap, label: "100% Open Source" },
 ];
 
 export default function Page() {
@@ -27,13 +27,13 @@ export default function Page() {
             </span>
           </div>
           <a
-            href="https://github.com"
+            href="https://github.com/Latracal-Solutions/liveqrcode"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
           >
             <Github className="w-4 h-4" />
-            <span className="hidden sm:inline">GitHub</span>
+            <span className="hidden sm:inline">Open Source</span>
           </a>
         </div>
       </header>

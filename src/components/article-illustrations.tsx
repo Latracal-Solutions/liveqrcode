@@ -335,7 +335,7 @@ export function HowToUseDiagram() {
 
             <text x="325" y="105" fill="#71717a" fontSize="8" fontFamily="system-ui">Website URL</text>
             <rect x="325" y="110" width="195" height="28" rx="6" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
-            <text x="335" y="128" fill="#18181b" fontSize="9" fontFamily="system-ui">https://liveqrcode.com</text>
+            <text x="335" y="128" fill="#18181b" fontSize="9" fontFamily="system-ui">https://www.liveqrcode.com</text>
 
             {/* Annotation */}
             <rect x="325" y="150" width="80" height="18" rx="9" fill="#10b981" />

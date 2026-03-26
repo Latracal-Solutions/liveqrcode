@@ -22,21 +22,21 @@ const examples: ExampleCard[] = [
     title: "Classic URL QR Code",
     annotation: "Simple & Clean",
     description: "Standard black and white QR code with square dots. Best for print materials and business documents.",
-    qrData: "https://liveqrcode.com",
+    qrData: "https://www.liveqrcode.com",
     style: { dotType: "square", fgColor: "#000000", bgColor: "#ffffff" },
   },
   {
     title: "Rounded Style QR Code",
     annotation: "Modern & Friendly",
     description: "Rounded dot pattern with smooth corners. Popular for consumer-facing brands and social media.",
-    qrData: "https://liveqrcode.com",
+    qrData: "https://www.liveqrcode.com",
     style: { dotType: "rounded", fgColor: "#1a1a2e", bgColor: "#ffffff", cornerSquareType: "extra-rounded", cornerDotType: "dot" },
   },
   {
     title: "Gradient QR Code",
     annotation: "Vibrant & Eye-catching",
     description: "Purple-to-pink gradient with elegant dot pattern. Makes your QR code a visual brand asset.",
-    qrData: "https://liveqrcode.com",
+    qrData: "https://www.liveqrcode.com",
     style: {
       dotType: "classy-rounded", fgColor: "#6d28d9", bgColor: "#ffffff",
       gradient: { color1: "#6d28d9", color2: "#db2777", type: "linear", rotation: 135 },
@@ -47,7 +47,7 @@ const examples: ExampleCard[] = [
     title: "Dot Pattern QR Code",
     annotation: "Artistic & Unique",
     description: "Circular dots with ocean blue gradient. Perfect for creative industries and event marketing.",
-    qrData: "https://liveqrcode.com",
+    qrData: "https://www.liveqrcode.com",
     style: {
       dotType: "dots", fgColor: "#0891b2", bgColor: "#ffffff",
       gradient: { color1: "#0891b2", color2: "#6366f1", type: "radial", rotation: 0 },

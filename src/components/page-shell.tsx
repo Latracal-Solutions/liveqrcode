@@ -27,10 +27,10 @@ export function PageShell({ children }: { children: React.ReactNode }) {
             <Link href="/" className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors hidden sm:inline">
               QR Generator
             </Link>
-            <a href="https://github.com" target="_blank" rel="noreferrer"
+            <a href="https://github.com/Latracal-Solutions/liveqrcode" target="_blank" rel="noreferrer"
               className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
               <Github className="w-4 h-4" />
-              <span className="hidden sm:inline">GitHub</span>
+              <span className="hidden sm:inline">Open Source</span>
             </a>
           </div>
         </div>

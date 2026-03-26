@@ -171,7 +171,7 @@ function ScannabilityBar({ score, label, color, warnings }: { score: number; lab
 export function QRGenerator() {
   // -- Content State --
   const [qrType, setQrType] = useState("url");
-  const [contentData, setContentData] = useState<Record<string, string>>({ url: "https://liveqrcode.com" });
+  const [contentData, setContentData] = useState<Record<string, string>>({ url: "https://www.liveqrcode.com" });
   const [typeFilter, setTypeFilter] = useState("popular");
 
   // -- Style State --
@@ -276,7 +276,7 @@ export function QRGenerator() {
     return {
       width: 280,
       height: 280,
-      data: debouncedData || "https://liveqrcode.com",
+      data: debouncedData || "https://www.liveqrcode.com",
       type: "canvas" as const,
       margin: margin[0],
       dotsOptions: { type: dotType as any, ...dotsColor },

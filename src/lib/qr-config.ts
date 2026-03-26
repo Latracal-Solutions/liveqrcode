@@ -65,7 +65,7 @@ export const QR_TYPES: QRTypeConfig[] = [
     id: "url", name: "URL", icon: Globe, category: "popular",
     fields: [{ key: "url", label: "Website URL", placeholder: "https://example.com", type: "url" }],
     encode: (d) => d.url || "https://example.com",
-    defaultData: { url: "https://liveqrcode.com" },
+    defaultData: { url: "https://www.liveqrcode.com" },
   },
   {
     id: "text", name: "Text", icon: Type, category: "popular",

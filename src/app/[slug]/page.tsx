@@ -174,8 +174,8 @@ export default async function QRTypeLandingPage({ params }: { params: Promise<{ 
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://liveqrcode.com" },
-                { "@type": "ListItem", position: 2, name: page.title, item: `https://liveqrcode.com/${page.slug}` },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.liveqrcode.com" },
+                { "@type": "ListItem", position: 2, name: page.title, item: `https://www.liveqrcode.com/${page.slug}` },
               ],
             }),
           }}
