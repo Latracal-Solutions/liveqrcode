@@ -1,0 +1,331 @@
+export interface QRLandingPage {
+  slug: string;
+  type: string; // matches QR_TYPES id
+  title: string;
+  metaTitle: string;
+  metaDescription: string;
+  h1: string;
+  intro: string;
+  whatIs: { heading: string; content: string };
+  howTo: { steps: string[] };
+  benefits: { title: string; desc: string }[];
+  bestPractices: string[];
+  faqs: { q: string; a: string }[];
+}
+
+export const QR_LANDING_PAGES: QRLandingPage[] = [
+  {
+    slug: "wifi-qr-code-generator",
+    type: "wifi",
+    title: "Free WiFi QR Code Generator",
+    metaTitle: "Free WiFi QR Code Generator - Share WiFi Password Instantly | Live QR Code",
+    metaDescription: "Create a free WiFi QR code to share your network credentials instantly. Guests scan and connect automatically. No app needed. Supports WPA/WPA2, WEP, and open networks.",
+    h1: "Free WiFi QR Code Generator",
+    intro: "Create a WiFi QR code that lets anyone connect to your network by simply scanning with their phone. No more spelling out complicated passwords — guests scan once and connect instantly.",
+    whatIs: {
+      heading: "What is a WiFi QR Code?",
+      content: "A WiFi QR code encodes your wireless network credentials (SSID, password, and encryption type) into a scannable QR code. When someone scans it with their smartphone camera, the device automatically connects to your WiFi network without typing the password manually. WiFi QR codes support WPA/WPA2, WEP, and open (no password) networks, and can also handle hidden SSIDs. They are ideal for homes, offices, restaurants, hotels, Airbnbs, and any space where you want to share internet access effortlessly.",
+    },
+    howTo: { steps: [
+      "Select 'WiFi' from the QR code type selector above",
+      "Enter your network name (SSID) exactly as it appears on your router",
+      "Enter your WiFi password and select the encryption type (WPA/WPA2 is most common)",
+      "Optionally mark the network as hidden if it doesn't broadcast its SSID",
+      "Customize the design with colors, patterns, logo, or frame label like 'Connect to WiFi'",
+      "Download in PNG or SVG format and print or display it where guests can scan",
+    ]},
+    benefits: [
+      { title: "Instant Connection", desc: "Guests connect in seconds without typing long passwords. Works on both iPhone and Android." },
+      { title: "No App Required", desc: "Modern smartphones scan QR codes natively through the camera app. No third-party app needed." },
+      { title: "Secure Sharing", desc: "Share your WiFi without revealing the password verbally. The QR code handles authentication securely." },
+      { title: "Perfect for Hospitality", desc: "Hotels, Airbnbs, restaurants, and cafes use WiFi QR codes to improve guest experience and reduce support requests." },
+    ],
+    bestPractices: [
+      "Print the QR code at least 3cm x 3cm for easy scanning",
+      "Place it at eye level near the entrance or reception area",
+      "Add a frame label like 'Scan for WiFi' or 'Free WiFi' to encourage scanning",
+      "Update the QR code whenever you change your WiFi password",
+      "Use high error correction (Q or H) if printing on textured surfaces",
+      "Test the QR code on both iPhone and Android before printing",
+    ],
+    faqs: [
+      { q: "Does a WiFi QR code share my password?", a: "The password is encoded in the QR code data, but it's not displayed as readable text. When scanned, the phone uses the credentials to connect automatically without showing the password to the user." },
+      { q: "Does it work on iPhone and Android?", a: "Yes. Both iOS (11+) and Android (10+) support WiFi QR code scanning natively through the camera app. No additional app is needed." },
+      { q: "What if I change my WiFi password?", a: "You'll need to create a new QR code with the updated password. The old QR code will no longer work since the encoded password won't match." },
+      { q: "Can I use it for a hidden network?", a: "Yes. Check the 'Hidden Network' option when creating the QR code. The device will connect even if the network doesn't broadcast its SSID." },
+      { q: "Is the WiFi QR code free?", a: "Yes, creating and downloading WiFi QR codes is completely free on Live QR Code. No sign-up or payment required." },
+      { q: "What encryption types are supported?", a: "Live QR Code supports WPA/WPA2 (most common), WEP (legacy), and open/no-password networks." },
+    ],
+  },
+  {
+    slug: "vcard-qr-code-generator",
+    type: "vcard",
+    title: "Free vCard QR Code Generator",
+    metaTitle: "Free vCard QR Code Generator - Digital Business Card | Live QR Code",
+    metaDescription: "Create a free vCard QR code for your digital business card. Save contact info (name, phone, email, company, address) directly to phones with one scan.",
+    h1: "Free vCard QR Code Generator",
+    intro: "Turn your business card into a scannable QR code. When someone scans your vCard QR code, your full contact information is saved directly to their phone — name, title, company, phone, email, website, and address.",
+    whatIs: {
+      heading: "What is a vCard QR Code?",
+      content: "A vCard QR code contains structured contact information in the standard vCard format (also known as VCF). When scanned, it opens the phone's contacts app with all your details pre-filled, ready to save with one tap. This eliminates manual data entry and ensures your contact information is saved correctly every time. vCard QR codes are the modern replacement for physical business cards and are widely used at conferences, networking events, job fairs, and in email signatures.",
+    },
+    howTo: { steps: [
+      "Select 'vCard' from the QR code type selector",
+      "Fill in your contact details: name, company, job title, phone, email, and website",
+      "Optionally add your street address, city, state, ZIP code, and country",
+      "Customize the QR code design with your brand colors or company logo",
+      "Add a frame with text like 'Save My Contact' or 'Scan My Card'",
+      "Download and use on business cards, email signatures, presentations, or conference badges",
+    ]},
+    benefits: [
+      { title: "Never Run Out of Cards", desc: "Digital business cards never run out. Share your contact info with unlimited people at events and meetings." },
+      { title: "Always Up to Date", desc: "Changed your phone number or email? Create an updated QR code instantly. No reprinting physical cards." },
+      { title: "Zero Data Entry Errors", desc: "Contacts are saved exactly as you entered them. No typos from manual entry or misread handwriting." },
+      { title: "Eco-Friendly", desc: "Reduce paper waste by replacing physical business cards with a digital QR code alternative." },
+    ],
+    bestPractices: [
+      "Include only the most important contact details to keep the QR code simple and scannable",
+      "Use error correction level Q or H since vCard data can be dense",
+      "Add your company logo to the center for brand recognition",
+      "Print the QR code on the back of physical business cards as a hybrid solution",
+      "Test with multiple phone types to ensure all fields save correctly",
+    ],
+    faqs: [
+      { q: "What information can a vCard QR code contain?", a: "First name, last name, company, job title, phone number, email, website URL, and full mailing address (street, city, state, ZIP, country)." },
+      { q: "Is it compatible with all phones?", a: "Yes. vCard is a universal standard supported by iOS, Android, Windows Phone, and virtually all modern smartphones." },
+      { q: "Can I add a photo to the vCard?", a: "The standard vCard format supports photos, but QR codes have limited data capacity. For QR codes, we recommend linking to a profile page instead." },
+      { q: "How is this different from a regular URL QR code?", a: "A URL QR code opens a website. A vCard QR code directly opens the contacts app with your info pre-filled for saving. No internet connection required." },
+      { q: "Can I use it on my email signature?", a: "Absolutely. vCard QR codes on email signatures let recipients save your contact details without manually copying from the email." },
+    ],
+  },
+  {
+    slug: "whatsapp-qr-code-generator",
+    type: "whatsapp",
+    title: "Free WhatsApp QR Code Generator",
+    metaTitle: "Free WhatsApp QR Code Generator - Start Chat Instantly | Live QR Code",
+    metaDescription: "Create a free WhatsApp QR code with pre-filled message. Let customers message you on WhatsApp with one scan. Perfect for business, support, and marketing.",
+    h1: "Free WhatsApp QR Code Generator",
+    intro: "Create a WhatsApp QR code that opens a chat with your number instantly. Add a pre-filled message to streamline customer conversations, support requests, or sales inquiries.",
+    whatIs: {
+      heading: "What is a WhatsApp QR Code?",
+      content: "A WhatsApp QR code uses the wa.me deep link format to open a WhatsApp conversation with a specific phone number. When scanned, it opens WhatsApp directly (or prompts to install it) with the recipient number and optionally a pre-filled message ready to send. This is widely used by businesses for customer support, order inquiries, appointment booking, and marketing campaigns. WhatsApp QR codes work globally and support any phone number with an active WhatsApp account.",
+    },
+    howTo: { steps: [
+      "Select 'WhatsApp' from the QR code type selector",
+      "Enter your phone number with country code (e.g., +1234567890)",
+      "Optionally add a pre-filled message that will appear in the chat",
+      "Customize the design — consider using WhatsApp's brand green color",
+      "Download and share on print materials, websites, or social media",
+    ]},
+    benefits: [
+      { title: "Instant Customer Contact", desc: "Remove friction from customer communication. One scan opens a direct chat with your business." },
+      { title: "Pre-filled Messages", desc: "Set a default message like 'Hi, I'm interested in...' to give context to incoming chats." },
+      { title: "Global Reach", desc: "WhatsApp has 2+ billion users worldwide. QR codes work with any WhatsApp account in any country." },
+      { title: "Track Conversations", desc: "Since all chats come through WhatsApp, you have a natural record of customer interactions." },
+    ],
+    bestPractices: [
+      "Always include the country code with your phone number",
+      "Keep pre-filled messages short and actionable",
+      "Place QR codes where customers need immediate help (product displays, support pages)",
+      "Consider using WhatsApp Business for auto-replies and catalog features",
+    ],
+    faqs: [
+      { q: "Do customers need WhatsApp installed?", a: "Yes. If WhatsApp isn't installed, the scan will prompt the user to download it. Most smartphone users worldwide already have WhatsApp." },
+      { q: "Can I use a WhatsApp Business number?", a: "Yes. WhatsApp QR codes work with both regular WhatsApp and WhatsApp Business accounts." },
+      { q: "Is the pre-filled message editable by the scanner?", a: "Yes. The message appears as a draft that the user can edit or send as-is." },
+      { q: "Does it work without internet?", a: "The QR code itself scans offline, but opening WhatsApp and sending messages requires an internet connection." },
+    ],
+  },
+  {
+    slug: "instagram-qr-code-generator",
+    type: "instagram",
+    title: "Free Instagram QR Code Generator",
+    metaTitle: "Free Instagram QR Code Generator - Grow Your Following | Live QR Code",
+    metaDescription: "Create a free Instagram QR code to grow your following. Users scan and go directly to your Instagram profile. Perfect for retail, events, and marketing.",
+    h1: "Free Instagram QR Code Generator",
+    intro: "Create a QR code that takes people directly to your Instagram profile. Place it in your store, on product packaging, at events, or on business cards to grow your following effortlessly.",
+    whatIs: {
+      heading: "What is an Instagram QR Code?",
+      content: "An Instagram QR code links directly to your Instagram profile page. When scanned, it opens the Instagram app (or website) showing your profile, where the user can follow you, view your posts, or send a message. Unlike Instagram's built-in Nametag feature (which was discontinued), custom Instagram QR codes can be fully branded with your colors, logo, and design style.",
+    },
+    howTo: { steps: [
+      "Select 'Instagram' from the QR code type selector",
+      "Enter your Instagram username (without the @ symbol)",
+      "Customize with your brand colors — Instagram's gradient (purple to orange) works great",
+      "Add your logo or profile picture to the center of the QR code",
+      "Add a frame label like 'Follow Us on Instagram' for clear call-to-action",
+      "Download and use on print materials, product labels, or in-store displays",
+    ]},
+    benefits: [
+      { title: "Grow Followers Organically", desc: "Make it effortless for people to find and follow your Instagram account from physical touchpoints." },
+      { title: "Bridge Offline to Online", desc: "Connect in-store customers, event attendees, and print ad viewers directly to your Instagram presence." },
+      { title: "Fully Customizable", desc: "Unlike Instagram's discontinued Nametag, custom QR codes can match your brand identity perfectly." },
+      { title: "Track Engagement", desc: "Monitor which physical locations or materials drive the most Instagram profile visits." },
+    ],
+    bestPractices: [
+      "Use Instagram's brand colors (gradient from #833AB4 to #FD1D1D to #F77737) for instant recognition",
+      "Add your profile picture as the QR code logo for personal branding",
+      "Include a clear call-to-action like 'Follow Us' or 'See Our Latest Posts'",
+      "Place QR codes where your target audience spends time (retail stores, restaurants, events)",
+    ],
+    faqs: [
+      { q: "Does the user need Instagram installed?", a: "If Instagram is installed, the QR code opens the app directly. If not, it opens your profile in the web browser." },
+      { q: "Can I link to a specific post instead of my profile?", a: "Yes. Instead of entering a username, use the URL QR code type and paste the direct link to any Instagram post, reel, or story highlight." },
+      { q: "Will the QR code break if I change my username?", a: "Yes. If you change your Instagram username, you'll need to create a new QR code with the updated username." },
+    ],
+  },
+  {
+    slug: "email-qr-code-generator",
+    type: "email",
+    title: "Free Email QR Code Generator",
+    metaTitle: "Free Email QR Code Generator - Pre-filled Email with One Scan | Live QR Code",
+    metaDescription: "Create a free email QR code with pre-filled recipient, subject, and body. Simplify feedback collection, support requests, and contact forms with one scan.",
+    h1: "Free Email QR Code Generator",
+    intro: "Generate a QR code that opens a pre-composed email with the recipient, subject line, and message body already filled in. Perfect for feedback collection, support requests, and simplifying contact.",
+    whatIs: {
+      heading: "What is an Email QR Code?",
+      content: "An email QR code uses the mailto: protocol to open the user's default email app with pre-filled fields. You can set the recipient email address, subject line, and body text. When scanned, the user simply taps 'Send' — no typing required. This is ideal for collecting customer feedback, simplifying support requests, gathering job applications, or enabling quick contact from print materials.",
+    },
+    howTo: { steps: [
+      "Select 'Email' from the QR code type selector",
+      "Enter the recipient email address",
+      "Add a subject line and optional body text",
+      "Customize the QR code design to match your branding",
+      "Download and place on feedback cards, product inserts, or posters",
+    ]},
+    benefits: [
+      { title: "Reduce Friction", desc: "Pre-filled emails mean users don't have to type your email address or compose a subject line." },
+      { title: "Higher Response Rates", desc: "Making it easy to send an email dramatically increases response rates for feedback and surveys." },
+      { title: "Works Everywhere", desc: "Email QR codes work with any email app on any device. No special software required." },
+      { title: "Trackable Engagement", desc: "Count incoming emails from QR code campaigns to measure offline-to-online conversion." },
+    ],
+    bestPractices: [
+      "Keep the subject line clear and specific so recipients know the context",
+      "Pre-fill the body with a template the user can customize before sending",
+      "Use a monitored email address that gets prompt responses",
+      "Add a frame label like 'Send Us Feedback' or 'Contact Us'",
+    ],
+    faqs: [
+      { q: "Which email apps are supported?", a: "Email QR codes work with any default email app: Gmail, Outlook, Apple Mail, Yahoo Mail, and others." },
+      { q: "Can I pre-fill the email body?", a: "Yes. You can set both the subject line and body text. The user can edit these before sending." },
+      { q: "Can I add CC or BCC recipients?", a: "The standard mailto: format supports CC and BCC, but for simplicity our generator focuses on the primary recipient, subject, and body." },
+    ],
+  },
+  {
+    slug: "google-review-qr-code-generator",
+    type: "googlereview",
+    title: "Free Google Review QR Code Generator",
+    metaTitle: "Free Google Review QR Code Generator - Get More 5-Star Reviews | Live QR Code",
+    metaDescription: "Create a free Google Review QR code to collect more customer reviews. Place on receipts, table cards, and follow-ups to boost your local SEO ranking.",
+    h1: "Free Google Review QR Code Generator",
+    intro: "Make it effortless for happy customers to leave Google reviews. Create a QR code that takes them directly to your Google review page — one scan, one tap to rate.",
+    whatIs: {
+      heading: "What is a Google Review QR Code?",
+      content: "A Google Review QR code links directly to the review submission page for your Google Business Profile. When a customer scans it, Google Maps opens with the review dialog ready — they just need to tap the stars and optionally add text. This dramatically reduces the friction of leaving a review, which typically requires searching for your business, finding the review button, and navigating through multiple screens.",
+    },
+    howTo: { steps: [
+      "Find your Google Place ID or review URL from Google Business Profile",
+      "Select 'Google Review' from the QR code type selector",
+      "Paste your Google Place ID or direct review URL",
+      "Customize the design — consider using Google's brand colors",
+      "Add a frame label like 'Rate Us on Google' or 'Leave a Review'",
+      "Print on receipts, table tents, business cards, and follow-up emails",
+    ]},
+    benefits: [
+      { title: "Boost Local SEO", desc: "More Google reviews improve your local search ranking, helping new customers find you." },
+      { title: "Increase Review Volume by 400%", desc: "Businesses using review QR codes report up to 4x more reviews compared to verbal requests." },
+      { title: "Capture Reviews at Peak Satisfaction", desc: "Place QR codes where customers are happiest — after a great meal, successful appointment, or positive experience." },
+      { title: "Build Trust", desc: "Potential customers read reviews before choosing a business. More positive reviews means more customers." },
+    ],
+    bestPractices: [
+      "Ask for reviews at the moment of highest satisfaction",
+      "Place QR codes on receipts, thank-you cards, and table tents",
+      "Train staff to mention the QR code after positive interactions",
+      "Never incentivize reviews — this violates Google's policies",
+      "Respond to all reviews (positive and negative) to show engagement",
+    ],
+    faqs: [
+      { q: "How do I find my Google Place ID?", a: "Search for your business on Google Maps, click on it, and look at the URL. You can also use Google's Place ID Finder tool. Alternatively, paste your business's Google Maps share link." },
+      { q: "Does the customer need a Google account?", a: "Yes. Leaving a Google review requires a Google account. Most Android users and Gmail users already have one." },
+      { q: "Can I get negative reviews this way?", a: "Yes — the QR code opens the review dialog where customers can leave any rating. Focus on providing great service to naturally earn positive reviews." },
+      { q: "How many reviews do I need to rank higher?", a: "There's no fixed number, but businesses with 40+ reviews and a 4.0+ average rating tend to rank significantly better in local search results." },
+    ],
+  },
+  {
+    slug: "url-qr-code-generator",
+    type: "url",
+    title: "Free URL QR Code Generator",
+    metaTitle: "Free URL QR Code Generator - Convert Any Link to QR Code | Live QR Code",
+    metaDescription: "Create a free URL QR code to convert any website link into a scannable code. Perfect for marketing, business cards, and print materials. No sign-up required.",
+    h1: "Free URL QR Code Generator",
+    intro: "Convert any website URL into a beautiful, scannable QR code in seconds. The most popular QR code type — perfect for marketing campaigns, business cards, product packaging, and print materials.",
+    whatIs: {
+      heading: "What is a URL QR Code?",
+      content: "A URL QR code encodes a website address (HTTP or HTTPS link) that opens in the user's web browser when scanned. This is the most common type of QR code, used by millions of businesses worldwide for marketing, advertising, product packaging, and customer engagement. URL QR codes can link to any web page: your website, a landing page, a product page, a social media profile, a video, a file download, or any other online resource.",
+    },
+    howTo: { steps: [
+      "Select 'URL' from the QR code type selector (selected by default)",
+      "Paste your website URL including https://",
+      "Customize with your brand colors, logo, and preferred dot pattern",
+      "Choose a frame style with a call-to-action like 'Visit Our Website' or 'Learn More'",
+      "Download in your preferred format and size",
+      "Use on print materials, digital displays, product packaging, or social media",
+    ]},
+    benefits: [
+      { title: "Universal Compatibility", desc: "URL QR codes work with every smartphone — just point the camera and the website opens automatically." },
+      { title: "Bridge Print to Digital", desc: "Connect offline materials (flyers, posters, packaging) directly to your online presence." },
+      { title: "Trackable with UTM", desc: "Add UTM parameters to your URL to track QR code scans in Google Analytics." },
+      { title: "Compact Data", desc: "URLs create relatively small QR codes that are easy to scan even at small print sizes." },
+    ],
+    bestPractices: [
+      "Always use HTTPS links for security and trust",
+      "Keep URLs as short as possible for simpler QR codes",
+      "Use UTM parameters (utm_source=qr&utm_medium=print) for analytics tracking",
+      "Link to mobile-optimized pages since QR codes are scanned with phones",
+      "Test the destination URL before printing to avoid broken links",
+    ],
+    faqs: [
+      { q: "Can I use any URL?", a: "Yes — any valid web address works, including regular websites, landing pages, social media profiles, YouTube videos, Google Drive files, and more." },
+      { q: "What if the URL is very long?", a: "Long URLs create denser QR codes. Consider using a URL shortener or linking to a cleaner URL for best results." },
+      { q: "Does the QR code break if I change my website?", a: "The QR code always points to the exact URL you encoded. If the page moves or is deleted, the QR code will lead to a 404 error." },
+      { q: "Can I track how many people scan the QR code?", a: "Add UTM parameters to your URL and track scans in Google Analytics. For example: yoursite.com/page?utm_source=qr" },
+    ],
+  },
+  {
+    slug: "bitcoin-qr-code-generator",
+    type: "crypto",
+    title: "Free Bitcoin QR Code Generator",
+    metaTitle: "Free Bitcoin QR Code Generator - Accept Crypto Payments | Live QR Code",
+    metaDescription: "Create a free Bitcoin QR code to accept cryptocurrency payments. Supports BTC, ETH, and LTC with optional amounts. Perfect for merchants and donations.",
+    h1: "Free Bitcoin & Cryptocurrency QR Code Generator",
+    intro: "Generate QR codes for Bitcoin, Ethereum, and Litecoin wallet addresses. Accept cryptocurrency payments, donations, or tips with a simple scan.",
+    whatIs: {
+      heading: "What is a Bitcoin QR Code?",
+      content: "A Bitcoin QR code encodes a cryptocurrency wallet address using the BIP 21 URI scheme (bitcoin:address?amount=X). When scanned with a crypto wallet app, it automatically fills in the recipient address and optionally the amount, reducing errors from manually copying long wallet addresses. This format is supported by all major cryptocurrency wallets including Coinbase, MetaMask, Trust Wallet, and Bitcoin Core.",
+    },
+    howTo: { steps: [
+      "Select 'Bitcoin' from the QR code type selector",
+      "Choose your cryptocurrency (Bitcoin, Ethereum, or Litecoin)",
+      "Paste your wallet address",
+      "Optionally set a payment amount and label",
+      "Customize the design and download",
+    ]},
+    benefits: [
+      { title: "Eliminate Address Errors", desc: "Crypto addresses are long and error-prone. QR codes ensure the correct address every time." },
+      { title: "Instant Payments", desc: "Customers scan and confirm payment in their wallet app. No copying, no pasting, no mistakes." },
+      { title: "Multi-Currency Support", desc: "Generate QR codes for Bitcoin (BTC), Ethereum (ETH), and Litecoin (LTC)." },
+      { title: "Perfect for In-Person", desc: "Accept crypto payments at point-of-sale, markets, events, and retail locations." },
+    ],
+    bestPractices: [
+      "Always double-check your wallet address before creating the QR code",
+      "Include the payment amount for fixed-price items or invoices",
+      "Add a label to help identify the payment purpose",
+      "Print at sufficient size for easy scanning in payment scenarios",
+    ],
+    faqs: [
+      { q: "Which cryptocurrencies are supported?", a: "Live QR Code supports Bitcoin (BTC), Ethereum (ETH), and Litecoin (LTC) QR code generation." },
+      { q: "Do customers need a specific wallet app?", a: "Any cryptocurrency wallet that supports QR code scanning will work. This includes Coinbase, MetaMask, Trust Wallet, and most others." },
+      { q: "Can I set a specific payment amount?", a: "Yes. You can pre-fill the amount so the sender doesn't need to enter it manually." },
+    ],
+  },
+];
