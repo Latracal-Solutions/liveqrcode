@@ -814,7 +814,7 @@ export function QRGenerator() {
               </Section>
 
               {/* Colors */}
-              <Section title="Colors" icon={Palette}>
+              <Section title="Colors" icon={Palette} defaultOpen>
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <ColorPick color={fgColor} onChange={setFgColor} label="Foreground" />
