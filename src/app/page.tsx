@@ -16,7 +16,7 @@ const features = [
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans">
       {/* Header */}
       <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">

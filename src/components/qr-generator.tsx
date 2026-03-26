@@ -565,7 +565,7 @@ export function QRGenerator() {
       </div>
 
       {/* ── Main Layout ── */}
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 lg:items-start">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
         {/* ── Preview (first on mobile) ── */}
         <div className="w-full lg:w-5/12 xl:w-[400px] shrink-0 order-first lg:order-last">
           <div className="lg:sticky lg:top-[72px] space-y-4">
