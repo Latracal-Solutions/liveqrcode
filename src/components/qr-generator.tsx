@@ -539,7 +539,7 @@ export function QRGenerator() {
           <button
             key={cat.id}
             onClick={() => setTypeFilter(cat.id)}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+            className={`px-2.5 sm:px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
               typeFilter === cat.id
                 ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-sm"
                 : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
@@ -1013,13 +1013,13 @@ export function QRGenerator() {
 
       {/* Mobile Floating Download Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-t border-zinc-200 dark:border-zinc-800 px-4 py-3 safe-area-bottom">
-        <div className="flex items-center gap-3 max-w-lg mx-auto">
+        <div className="flex items-center gap-2 max-w-lg mx-auto">
           <div className="flex gap-1 shrink-0">
             {(["png", "svg"] as const).map((fmt) => (
               <button
                 key={fmt}
                 onClick={() => setDownloadFormat(fmt)}
-                className={`px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase ${
+                className={`px-2 py-1.5 rounded-lg text-[10px] font-bold uppercase ${
                   downloadFormat === fmt
                     ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900"
                     : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500"
@@ -1029,14 +1029,14 @@ export function QRGenerator() {
               </button>
             ))}
           </div>
-          <Button className="flex-1 h-10 text-sm font-semibold" onClick={handleDownload} disabled={isDownloading}>
+          <Button className="flex-1 min-w-0 h-10 text-sm font-semibold" onClick={handleDownload} disabled={isDownloading}>
             {isDownloading ? <Loader2 className="w-4 h-4 animate-spin mr-1.5" /> : <Download className="w-4 h-4 mr-1.5" />}
             Download QR
           </Button>
-          <Button variant="outline" className="h-10 px-3 shrink-0" onClick={handleCopy}>
+          <Button variant="outline" className="h-10 w-10 p-0 shrink-0" onClick={handleCopy}>
             {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
           </Button>
-          <Button variant="outline" className="h-10 px-3 shrink-0" onClick={handleShare}>
+          <Button variant="outline" className="h-10 w-10 p-0 shrink-0" onClick={handleShare}>
             <Share2 className="w-4 h-4" />
           </Button>
         </div>
