@@ -3,11 +3,12 @@ import { QrCode, Sparkles, Shield, Zap, Globe, Heart, Users } from "lucide-react
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Live QR Code - Free AI QR Code Generator",
-  description: "Learn about Live QR Code, the most powerful free AI QR code generator. Our mission is to make professional QR codes accessible to everyone.",
+  title: "About Live QR Code - Free Open Source AI QR Code Generator",
+  description: "Learn about Live QR Code, the most powerful free open-source AI QR code generator. Create custom QR codes with patterns, gradients, logos, and AI art. No sign-up required.",
+  alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Live QR Code",
-    description: "The most powerful free AI QR code generator. Create stunning QR codes with custom patterns, gradients, logos, and AI art.",
+    title: "About Live QR Code - Free Open Source QR Code Generator",
+    description: "The most powerful free open-source AI QR code generator. Create stunning QR codes with custom patterns, gradients, logos, and AI art.",
   },
 };
 

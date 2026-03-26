@@ -68,10 +68,19 @@ export function PageShell({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-semibold text-sm text-zinc-700 dark:text-zinc-300 mb-3">QR Code Types</h3>
               <nav className="flex flex-col gap-2">
-                {["URL", "WiFi", "vCard", "WhatsApp", "Instagram", "Email", "Bitcoin", "Event"].map((t) => (
-                  <Link key={t} href={`/#${t.toLowerCase()}`}
+                {[
+                  { name: "URL", slug: "url-qr-code-generator" },
+                  { name: "WiFi", slug: "wifi-qr-code-generator" },
+                  { name: "vCard", slug: "vcard-qr-code-generator" },
+                  { name: "WhatsApp", slug: "whatsapp-qr-code-generator" },
+                  { name: "Instagram", slug: "instagram-qr-code-generator" },
+                  { name: "Email", slug: "email-qr-code-generator" },
+                  { name: "Bitcoin", slug: "bitcoin-qr-code-generator" },
+                  { name: "Google Review", slug: "google-review-qr-code-generator" },
+                ].map((t) => (
+                  <Link key={t.slug} href={`/${t.slug}`}
                     className="text-xs text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-                    {t} QR Code
+                    {t.name} QR Code
                   </Link>
                 ))}
               </nav>

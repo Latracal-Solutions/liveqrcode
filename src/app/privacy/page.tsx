@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy - Live QR Code",
   description: "Privacy Policy for Live QR Code. Learn how we handle your data. Spoiler: we don't collect or store any personal data.",
+  alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacy Policy - Live QR Code",
     description: "Learn how Live QR Code handles your data and protects your privacy.",

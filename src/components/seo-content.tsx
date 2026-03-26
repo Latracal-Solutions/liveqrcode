@@ -592,7 +592,7 @@ export function SEOContent() {
           Join millions of users who trust Live QR Code. Start creating stunning, professional QR codes in seconds — completely free.
         </p>
         <a
-          href="#top"
+          href="/"
           className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-full font-semibold text-sm hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"
         >
           Create QR Code Now <ArrowRight className="w-4 h-4" />

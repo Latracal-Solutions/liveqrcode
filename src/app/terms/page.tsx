@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service - Live QR Code",
   description: "Terms of Service for Live QR Code. Read our terms and conditions for using our free QR code generator.",
+  alternates: { canonical: "/terms" },
   openGraph: {
     title: "Terms of Service - Live QR Code",
     description: "Terms and conditions for using Live QR Code, the free AI QR code generator.",
