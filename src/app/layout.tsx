@@ -47,7 +47,9 @@ export const metadata: Metadata = {
     title: "Live QR Code - Free Open Source AI QR Code Generator",
     description: "Create stunning QR codes with custom patterns, gradients, logos, and AI art. 100% free and open source.",
   },
-  verification: {},
+  verification: {
+    google: "68dZyZ_MCjsPunBOrzHnTPXyh9KGOPuvzY5vszsA7R8",
+  },
   category: "Technology",
 };
 
