@@ -292,9 +292,9 @@ export function QRGenerator() {
     errorCorrection, margin,
   ]);
 
-  // Full options with logo - only recalculated when logo changes
+  // Full options with logo
   const qrFullOptions = useMemo(() => {
-    if (!logoDataUrl) return qrBaseOptions;
+    if (!logoDataUrl) return { ...qrBaseOptions, image: "", imageOptions: { hideBackgroundDots: true, imageSize: 0, margin: 0 } };
     return {
       ...qrBaseOptions,
       image: logoDataUrl,
@@ -302,18 +302,12 @@ export function QRGenerator() {
     };
   }, [qrBaseOptions, logoDataUrl, logoSize]);
 
-  // Recreate QR only when logo is toggled on/off; update() for everything else
-  const prevHadLogoRef = useRef(false);
-
+  // Single effect: create once, update thereafter
   useEffect(() => {
     const QRCodeStyling = QRClassRef.current;
     if (!QRCodeStyling || !qrContainerRef.current) return;
 
-    const hasLogo = !!logoDataUrl;
-    const logoToggled = prevHadLogoRef.current !== hasLogo;
-    prevHadLogoRef.current = hasLogo;
-
-    if (!qrInstanceRef.current || logoToggled) {
+    if (!qrInstanceRef.current) {
       qrContainerRef.current.innerHTML = "";
       const qr = new QRCodeStyling(qrFullOptions);
       qr.append(qrContainerRef.current);
@@ -362,7 +356,9 @@ export function QRGenerator() {
   const compressImage = useCallback((file: File, maxSize: number): Promise<string> => {
     return new Promise((resolve) => {
       const img = new Image();
+      const objectUrl = URL.createObjectURL(file);
       img.onload = () => {
+        URL.revokeObjectURL(objectUrl);
         const canvas = document.createElement("canvas");
         let { width, height } = img;
         if (width > maxSize || height > maxSize) {
@@ -373,9 +369,9 @@ export function QRGenerator() {
         canvas.width = width;
         canvas.height = height;
         canvas.getContext("2d")!.drawImage(img, 0, 0, width, height);
-        resolve(canvas.toDataURL("image/png", 0.85));
+        resolve(canvas.toDataURL("image/jpeg", 0.8));
       };
-      img.src = URL.createObjectURL(file);
+      img.src = objectUrl;
     });
   }, []);
 
