@@ -787,13 +787,13 @@ export function QRGenerator() {
                       ))}
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-3">
                     <div>
                       <Label className="text-xs text-zinc-500 mb-2 block">Corner Square</Label>
-                      <div className="flex gap-2">
+                      <div className="flex gap-1.5">
                         {CORNER_SQUARE_STYLES.map((s) => (
                           <button key={s.id} onClick={() => setCornerSquareType(s.id)}
-                            className={`flex-1 py-2 rounded-lg border text-xs font-medium transition-all ${
+                            className={`flex-1 py-1.5 rounded-lg border text-[11px] font-medium transition-all truncate ${
                               cornerSquareType === s.id ? "border-zinc-900 dark:border-white bg-zinc-50 dark:bg-zinc-800" : "border-zinc-200 dark:border-zinc-800 hover:border-zinc-300"
                             }`}>{s.name}</button>
                         ))}
@@ -801,10 +801,10 @@ export function QRGenerator() {
                     </div>
                     <div>
                       <Label className="text-xs text-zinc-500 mb-2 block">Corner Dot</Label>
-                      <div className="flex gap-2">
+                      <div className="flex gap-1.5">
                         {CORNER_DOT_STYLES.map((s) => (
                           <button key={s.id} onClick={() => setCornerDotType(s.id)}
-                            className={`flex-1 py-2 rounded-lg border text-xs font-medium transition-all ${
+                            className={`flex-1 py-1.5 rounded-lg border text-[11px] font-medium transition-all truncate ${
                               cornerDotType === s.id ? "border-zinc-900 dark:border-white bg-zinc-50 dark:bg-zinc-800" : "border-zinc-200 dark:border-zinc-800 hover:border-zinc-300"
                             }`}>{s.name}</button>
                         ))}

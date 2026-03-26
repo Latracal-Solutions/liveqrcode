@@ -38,8 +38,8 @@ export default function Page() {
         </div>
       </header>
 
-      {/* Hero - compact */}
-      <section className="bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 py-5 sm:py-7 text-center">
+      {/* Hero - compact, seamless with generator */}
+      <section className="bg-zinc-50 dark:bg-zinc-950 pt-4 sm:pt-6 pb-0 text-center">
         <div className="max-w-3xl mx-auto px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 leading-[1.1]">
             Free QR Code Generator
@@ -47,7 +47,7 @@ export default function Page() {
           <p className="mt-2 text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 max-w-lg mx-auto">
             Create custom QR codes with patterns, gradients, logos, frames, and AI art. 27+ types. No sign-up.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-1.5 mt-3">
+          <div className="hidden sm:flex flex-wrap items-center justify-center gap-1.5 mt-3">
             {features.map((f) => (
               <div
                 key={f.label}
@@ -58,6 +58,9 @@ export default function Page() {
               </div>
             ))}
           </div>
+          <p className="sm:hidden mt-1.5 text-[11px] text-zinc-400 dark:text-zinc-500">
+            Free forever. No watermarks. No sign-up required.
+          </p>
         </div>
       </section>
 

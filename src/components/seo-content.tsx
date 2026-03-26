@@ -583,66 +583,6 @@ export function SEOContent() {
         />
       </section>
 
-      {/* Worldwide / Multi-Language Section */}
-      <section className="py-16 sm:py-20 border-t border-zinc-200 dark:border-zinc-800">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 mb-3">
-            Free QR Code Generator — Used Worldwide
-          </h2>
-          <p className="text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto text-sm">
-            Live QR Code is trusted by millions of people across the globe to create free, customizable QR codes in every language. No matter where you are, our QR code generator works instantly.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 max-w-5xl mx-auto">
-          {[
-            { lang: "English", term: "QR Code Generator", flag: "🇺🇸" },
-            { lang: "Español", term: "Generador de códigos QR", flag: "🇪🇸" },
-            { lang: "Français", term: "Générateur de code QR", flag: "🇫🇷" },
-            { lang: "Deutsch", term: "QR-Code-Generator", flag: "🇩🇪" },
-            { lang: "Português", term: "Gerador de código QR", flag: "🇧🇷" },
-            { lang: "Italiano", term: "Generatore di codice QR", flag: "🇮🇹" },
-            { lang: "Nederlands", term: "QR-code generator", flag: "🇳🇱" },
-            { lang: "Русский", term: "Генератор QR-кодов", flag: "🇷🇺" },
-            { lang: "日本語", term: "QRコードジェネレーター", flag: "🇯🇵" },
-            { lang: "한국어", term: "QR 코드 생성기", flag: "🇰🇷" },
-            { lang: "中文", term: "二维码生成器", flag: "🇨🇳" },
-            { lang: "العربية", term: "مولد رمز QR", flag: "🇸🇦" },
-            { lang: "हिन्दी", term: "QR कोड जनरेटर", flag: "🇮🇳" },
-            { lang: "Türkçe", term: "QR kod oluşturucu", flag: "🇹🇷" },
-            { lang: "Polski", term: "Generator kodów QR", flag: "🇵🇱" },
-            { lang: "Svenska", term: "QR-kodgenerator", flag: "🇸🇪" },
-            { lang: "Bahasa", term: "Pembuat kode QR", flag: "🇮🇩" },
-            { lang: "ไทย", term: "สร้างรหัส QR", flag: "🇹🇭" },
-            { lang: "Tiếng Việt", term: "Tạo mã QR", flag: "🇻🇳" },
-            { lang: "Čeština", term: "Generátor QR kódů", flag: "🇨🇿" },
-            { lang: "Dansk", term: "QR-kode generator", flag: "🇩🇰" },
-            { lang: "Suomi", term: "QR-koodigeneraattori", flag: "🇫🇮" },
-            { lang: "Ελληνικά", term: "Γεννήτρια κωδικών QR", flag: "🇬🇷" },
-            { lang: "Magyar", term: "QR-kód generátor", flag: "🇭🇺" },
-            { lang: "Română", term: "Generator de coduri QR", flag: "🇷🇴" },
-            { lang: "Українська", term: "Генератор QR-кодів", flag: "🇺🇦" },
-            { lang: "עברית", term: "מחולל קוד QR", flag: "🇮🇱" },
-            { lang: "Norsk", term: "QR-kode generator", flag: "🇳🇴" },
-            { lang: "Filipino", term: "QR code generator", flag: "🇵🇭" },
-            { lang: "Melayu", term: "Penjana kod QR", flag: "🇲🇾" },
-          ].map((item) => (
-            <div
-              key={item.lang}
-              className="flex items-start gap-2.5 px-3 py-2.5 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
-            >
-              <span className="text-lg leading-none mt-0.5">{item.flag}</span>
-              <div className="min-w-0">
-                <p className="text-[11px] font-medium text-zinc-400 dark:text-zinc-500 leading-tight">{item.lang}</p>
-                <p className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 leading-tight mt-0.5 break-words">{item.term}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="text-center text-xs text-zinc-400 dark:text-zinc-500 mt-6 max-w-xl mx-auto">
-          Whether you need a <strong>Generador de códigos QR gratis</strong>, a <strong>QRコード作成</strong>, or a <strong>kostenloser QR-Code-Generator</strong> — Live QR Code supports all languages and character sets. Create QR codes with Unicode, emoji, Chinese characters, Arabic script, Cyrillic text, and more.
-        </p>
-      </section>
-
       {/* Final CTA */}
       <section className="py-16 sm:py-20 border-t border-zinc-200 dark:border-zinc-800 text-center">
         <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 mb-3">

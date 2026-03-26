@@ -77,9 +77,10 @@ function QRExampleCard({ example }: { example: ExampleCard }) {
           }
         : { color: example.style.fgColor };
 
+      const size = Math.min(140, containerRef.current.parentElement?.clientWidth ? containerRef.current.parentElement.clientWidth - 40 : 140);
       const opts: any = {
-        width: 180,
-        height: 180,
+        width: size,
+        height: size,
         data: example.qrData,
         type: "canvas",
         margin: 8,
@@ -97,11 +98,11 @@ function QRExampleCard({ example }: { example: ExampleCard }) {
   }, [example, rendered]);
 
   return (
-    <div className="flex flex-col items-center p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:shadow-lg transition-shadow">
+    <div className="flex flex-col items-center p-3 sm:p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:shadow-lg transition-shadow overflow-hidden">
       <span className="text-[10px] font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-400 mb-2">
         {example.annotation}
       </span>
-      <div ref={containerRef} className="mb-4 [&>canvas]:rounded-xl" />
+      <div ref={containerRef} className="mb-3 sm:mb-4 [&>canvas]:rounded-xl [&>canvas]:max-w-full [&>canvas]:h-auto" />
       <h3 className="font-bold text-sm text-center mb-1">{example.title}</h3>
       <p className="text-[11px] text-zinc-500 text-center leading-relaxed">{example.description}</p>
     </div>
