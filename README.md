@@ -168,7 +168,7 @@ You are free to use, modify, and distribute this software for personal and comme
 
 ## Acknowledgments
 
-- [qr-code-styling](https://github.com/nickmessing/qr-code-styling) for the QR rendering engine
+- [qr-code-styling](https://github.com/nickmessing/qr-code-styling-node) for the QR rendering engine
 - [shadcn/ui](https://ui.shadcn.com/) for beautiful UI components
 - [Lucide](https://lucide.dev/) for the icon set
 - [Google Gemini](https://ai.google.dev/) for AI art generation
