@@ -660,6 +660,9 @@ export function QRGenerator() {
                       <Button variant="outline" className="h-11 px-3" onClick={handleCopyEmbed} title="Copy embed code">
                         {embedCopied ? <Check className="w-4 h-4 text-emerald-500" /> : <Code2 className="w-4 h-4" />}
                       </Button>
+                      <Button variant="outline" className="h-11 px-3" onClick={handleShare} title="Share QR code">
+                        <Share2 className="w-4 h-4" />
+                      </Button>
                     </div>
                     <p className="text-center text-[11px] text-zinc-400">
                       Free forever. No watermarks. No sign-up required.
