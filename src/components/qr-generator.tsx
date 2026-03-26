@@ -565,10 +565,10 @@ export function QRGenerator() {
       </div>
 
       {/* ── Main Layout ── */}
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 lg:items-start">
         {/* ── Preview (first on mobile) ── */}
         <div className="w-full lg:w-5/12 xl:w-[400px] shrink-0 order-first lg:order-last">
-          <div className="lg:sticky lg:top-6 space-y-4">
+          <div className="lg:sticky lg:top-[72px] space-y-4">
             {/* Preview Card */}
             <div className="relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-2xl blur-sm" />
